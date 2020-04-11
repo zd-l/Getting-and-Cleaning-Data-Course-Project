@@ -48,6 +48,6 @@ names(extracteddata) <- gsub("gravity", "Gravity", names(extracteddata))
 groupeddata <- group_by(extracteddata, subject, activity)
 finaldata<- summarise_all(groupeddata, funs(mean))
 
-write.table(finaldata,"Outputdata.txt")
+write.table(finaldata,"Outputdata.txt", row.name=FALSE)
 
 
